@@ -82,6 +82,8 @@ body {
 /*-------------------------HEADER-------------------------*/
 .header-container {
   border-bottom: 1px solid #ececec;
+  box-sizing: border-box;
+  align-items: baseline;
 }
 
 .header-nav {
@@ -95,7 +97,6 @@ body {
   line-height: 1.19;
   color: var(--logo-first-text-color);
   padding-top: 24px;
-  padding-left: 15px;
   padding-bottom: 25px;
 }
 
@@ -133,7 +134,7 @@ body {
 
 .header-list-container {
   display: flex;
-  padding-right: 15px;
+  margin-left: 344px;
 }
 
 .header-item {
