@@ -19,6 +19,40 @@
   --footer-tel-mail-color: rgba(255, 255, 255, 0.6);
 }
 
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-main-color);
@@ -35,12 +69,23 @@ body {
   text-decoration: none;
 }
 
-/*-------------------------HEADER-------------------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  outline: 2px solid tomato;
+}
 
+/*-------------------------HEADER-------------------------*/
 .header-container {
+  border-bottom: 1px solid #ececec;
 }
 
 .header-nav {
+  display: flex;
 }
 
 .header-logo {
@@ -49,6 +94,9 @@ body {
   font-size: 26px;
   line-height: 1.19;
   color: var(--logo-first-text-color);
+  padding-top: 24px;
+  padding-left: 15px;
+  padding-bottom: 25px;
 }
 
 .header-logo-color {
@@ -58,7 +106,19 @@ body {
 .header-nav-list {
 }
 
+.header-nav-container {
+  display: flex;
+  margin-left: 93px;
+}
+
 .header-nav-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+}
+
+.header-nav-item:last-child {
+  margin-right: 0;
 }
 
 .header-nav-link {
@@ -71,7 +131,20 @@ body {
 .header-list {
 }
 
+.header-list-container {
+  display: flex;
+  padding-right: 15px;
+}
+
 .header-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+  justify-content: flex-end;
+}
+
+.header-item:last-child {
+  margin-right: 0;
 }
 
 .header-mail,
@@ -119,7 +192,6 @@ body {
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
   border: 0;
-  cursor: pointer;
 
   background: var(--btn-main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -255,14 +327,12 @@ body {
 
 .footer-contacts-map {
   font-weight: 400;
-  font-style: normal;
   line-height: 1.71;
   color: var(--text-third-color);
 }
 
 .footer-contacts-mail,
 .footer-contacts-tel {
-  font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   color: var(--footer-tel-mail-color);
@@ -308,7 +378,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--btn-second-text-color);
   border: 0;
-  cursor: pointer;
 
   background: var(--btn-second-color);
   border-radius: 4px;
