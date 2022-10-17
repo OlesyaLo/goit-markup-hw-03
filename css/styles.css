@@ -70,16 +70,20 @@ body {
 }
 
 .container {
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  display: flex;
   outline: 2px solid tomato;
 }
 
-/*-------------------------HEADER-------------------------*/
+.section {
+  padding: 94px 0;
+}
+
+/*------------------------HEADER-------------------------*/
 .header-container {
   box-sizing: border-box;
   align-items: baseline;
@@ -110,8 +114,6 @@ body {
 }
 
 .header-nav-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-right: 50px;
 }
 
@@ -120,6 +122,9 @@ body {
 }
 
 .header-nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 0.02em;
@@ -132,10 +137,7 @@ body {
 }
 
 .header-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
   margin-right: 50px;
-  justify-content: flex-end;
 }
 
 .header-item:last-child {
@@ -144,6 +146,9 @@ body {
 
 .header-mail,
 .header-tel {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -168,6 +173,9 @@ body {
   height: 600px;
   box-sizing: border-box;
   padding: 200px 0;
+}
+
+.hero-section-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,12 +217,7 @@ body {
 /*-------------------------BENEFITS-------------------------*/
 
 .benefits-section {
-}
-
-.benefits-list {
-}
-
-.benefits-item {
+  width: 100%;
 }
 
 .visually-hidden {
@@ -230,7 +233,21 @@ body {
   margin: -1px;
 }
 
+.benefits-list {
+  display: flex;
+}
+
+.benefits-item {
+  margin-right: 30px;
+  width: 270px;
+}
+
+.benefits-item:last-child {
+  margin-right: 0;
+}
+
 .benefits-item-title {
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -242,20 +259,34 @@ body {
 }
 /*-------------------------SERVICES-------------------------*/
 .services-section {
+  width: 100%;
+  padding-bottom: 94px;
 }
+
+.services-section-container {
+  display: block;
+}
+
 .services-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   color: var(--title-second-color);
+  margin-bottom: 50px;
 }
 .services-list {
+  display: flex;
 }
-.list {
-}
+
 .services-item {
+  margin-right: 30px;
 }
+
+.services-item:last-child {
+  margin-right: 0;
+}
+
 .services-img-1 {
 }
 .services-img-2 {
@@ -266,9 +297,17 @@ body {
 /*-------------------------TEAM-------------------------*/
 
 .team-section {
+  width: 100%;
+  height: 648px;
   background-color: var(--background-third-color);
 }
+
+.team-section-container {
+  display: block;
+}
+
 .team-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -276,18 +315,36 @@ body {
   color: var(--title-second-color);
 }
 .team-list {
+  display: flex;
 }
-.list {
-}
+
 .team-item {
+  margin-right: 30px;
   background-color: var(--background-main-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
+
+.team-item:last-child {
+  margin-right: 0;
+}
+
+.team-item-container {
+  display: block;
+  width: 270px;
+  height: 108px;
+  padding: 30px 0;
+}
+
 .team-item-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--title-second-color);
+  margin-bottom: 10px;
 }
 .team-item-text {
   font-size: 16px;
@@ -295,21 +352,25 @@ body {
   text-align: center;
   color: var(--text-second-color);
 }
-.team-img-1 {
-}
-.team-img-2 {
-}
-.team-img-3 {
-}
-.team-img-4 {
+.team-img {
 }
 
 /*-------------------------FOOTER-------------------------*/
 
-.footer-container {
+.footer-section {
+  width: 100%;
   background-color: var(--background-second-color);
 }
+
+.footer-container {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -322,9 +383,17 @@ body {
   color: var(--logo-second-text-color);
 }
 .footer-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-item {
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer-contacts-map {
