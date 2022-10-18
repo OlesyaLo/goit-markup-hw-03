@@ -23,6 +23,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-main-color);
+  color: var(--text-main-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
 p,
 h1,
 h2,
@@ -51,14 +59,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: var(--background-main-color);
-  color: var(--text-main-color);
-  font-size: 14px;
-  letter-spacing: 0.03em;
 }
 
 .list {
@@ -289,8 +289,10 @@ body {
 
 .services-img-1 {
 }
+
 .services-img-2 {
 }
+
 .services-img-3 {
 }
 
@@ -303,7 +305,7 @@ body {
 }
 
 .team-section-container {
-  display: block;
+  flex-direction: column;
 }
 
 .team-title {
@@ -369,7 +371,7 @@ body {
 }
 
 .footer-logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
   font-family: 'Raleway';
   font-style: normal;
@@ -465,11 +467,44 @@ body {
 }
 
 /*-----------------------PORTFOLIO-PROJECTS--------------------*/
+.portfolio-section {
+  width: 100%;
+}
+
+.portfolio-section-container {
+  flex-direction: column;
+}
+
+.portfolio-btn-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-btn-item {
+  margin-right: 8px;
+}
+
+.portfolio-btn-item:last-child {
+  margin-right: 0;
+}
+
+.portfolio-btn {
+  display: block;
+  padding: 6px 22px;
+}
+
 .portfolio-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
 }
 
 .portfolio-projects-item {
-  border-bottom: 1px solid #eeeeee;
+  flex-basis: calc((100%-60px) / 3);
+  background-color: var(--background-main-color);
+  border: 1px solid #eeeeee;
 }
 .portfolio-projects-link {
 }
