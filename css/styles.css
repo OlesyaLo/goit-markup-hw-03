@@ -498,25 +498,32 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  list-style: none;
 }
 
 .portfolio-projects-item {
   flex-basis: calc((100%-60px) / 3);
-  background-color: var(--background-main-color);
-  border: 1px solid #eeeeee;
 }
+
+.portfolio-projects-item-container {
+  width: 370px;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
 .portfolio-projects-link {
 }
 
 .portfolio-projects-img {
 }
+
 .portfolio-projects-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-second-color);
+  margin-bottom: 4px;
 }
 
 .portfolio-projects-text {
