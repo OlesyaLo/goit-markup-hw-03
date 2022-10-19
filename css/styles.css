@@ -19,10 +19,6 @@
   --footer-tel-mail-color: rgba(255, 255, 255, 0.6);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--background-main-color);
@@ -48,7 +44,10 @@ ol {
 }
 
 button {
+  display: block;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
 }
 
 address {
@@ -63,6 +62,8 @@ img {
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .link {
@@ -70,12 +71,9 @@ img {
 }
 
 .container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .section {
@@ -84,9 +82,12 @@ img {
 
 /*------------------------HEADER-------------------------*/
 .header-container {
-  box-sizing: border-box;
   align-items: baseline;
   border-bottom: 1px solid #ececec;
+}
+
+.header-container > .container {
+  display: flex;
 }
 
 .header-nav {
@@ -132,7 +133,7 @@ img {
 
 .header-list {
   display: flex;
-  margin-left: 344px;
+  margin-left: auto;
 }
 
 .header-item {
@@ -168,20 +169,13 @@ img {
 
 .hero-section {
   background-color: var(--background-second-color);
-  width: 100%;
-  box-sizing: border-box;
   padding: 200px 0;
-}
-
-.hero-section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
 .hero-title {
   max-width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
@@ -194,16 +188,15 @@ img {
 .hero-btn {
   font-family: inherit;
   font-weight: 700;
+  margin: 0 auto;
+  padding: 10px 32px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--btn-text-color);
-  border: 0;
-  padding: 10px 32px;
 
   background: var(--btn-main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
 
 .hero-btn:hover,
@@ -249,6 +242,7 @@ img {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  font-size: 14px;
   color: var(--title-second-color);
 }
 .benefits-item-text {
@@ -358,14 +352,11 @@ img {
 /*-------------------------FOOTER-------------------------*/
 
 .footer-section {
-  width: 100%;
   background-color: var(--background-second-color);
+  padding: 60px 0;
 }
 
 .footer-container {
-  display: block;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -447,11 +438,9 @@ img {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--btn-second-text-color);
-  border: 0;
 
+  color: var(--btn-second-text-color);
   background: var(--btn-second-color);
-  border-radius: 4px;
 }
 
 .portfolio-btn.active,
@@ -466,11 +455,9 @@ img {
 
 /*-----------------------PORTFOLIO-PROJECTS--------------------*/
 .portfolio-section {
-  width: 100%;
 }
 
 .portfolio-section-container {
-  flex-direction: column;
 }
 
 .portfolio-btn-list {
@@ -500,10 +487,10 @@ img {
 
 .portfolio-projects-item {
   flex-basis: calc(100% - 60px) / 3;
+  width: 370px;
 }
 
 .portfolio-projects-item-container {
-  width: 370px;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
